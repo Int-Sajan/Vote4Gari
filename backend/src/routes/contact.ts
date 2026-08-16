@@ -32,8 +32,22 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
       message: body.message.trim(),
     });
   } catch (err) {
-    const message = err instanceof Error ? err.message : 'Failed to send message.';
-    console.error('[POST /api/contact] Email error:', message);
+    const details =
+      err instanceof Error
+        ? {
+            name: err.name,
+            message: err.message,
+            type: (err as { type?: unknown }).type,
+            status: (err as { status?: unknown }).status,
+            code: (err as { code?: unknown }).code,
+            cause: (err as { cause?: unknown }).cause,
+            stack: err.stack,
+          }
+        : { value: err };
+
+    // Log raw operational error details for local debugging. This does not
+    // include API keys/passwords because we only log the caught exception object.
+    console.error('[POST /api/contact] Email error details:', details);
     res.status(500).json({ success: false, message: 'Failed to send message. Please try again.' });
     return;
   }

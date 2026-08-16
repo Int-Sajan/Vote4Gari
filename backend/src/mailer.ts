@@ -1,5 +1,5 @@
 // All email credential handling lives here — never imported by the frontend.
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 // Escape user-supplied strings before embedding in HTML
 function escapeHtml(s: string): string {
@@ -10,24 +10,12 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot;');
 }
 
-function createTransport() {
-  const host = process.env.SMTP_HOST;
-  const port = Number(process.env.SMTP_PORT ?? 587);
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
-
-  if (!host || !user || !pass) {
-    throw new Error(
-      'Missing SMTP configuration. Set SMTP_HOST, SMTP_USER, and SMTP_PASS in .env'
-    );
+function createResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error('Missing RESEND_API_KEY in .env');
   }
-
-  return nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
-  });
+  return new Resend(apiKey);
 }
 
 export async function sendContactEmail(opts: {
@@ -35,16 +23,17 @@ export async function sendContactEmail(opts: {
   email: string;
   message: string;
 }): Promise<void> {
-  const transport = createTransport();
+  const resend = createResendClient();
   const to = process.env.CONTACT_EMAIL ?? 'vote4garishan@gmail.com';
+  const from = process.env.CONTACT_FROM_EMAIL ?? 'onboarding@resend.dev';
   const safeName    = escapeHtml(opts.name);
   const safeEmail   = escapeHtml(opts.email);
   const safeMessage = escapeHtml(opts.message);
 
-  await transport.sendMail({
-    from:    `"Vote4Garishan Website" <${process.env.SMTP_USER}>`,
-    replyTo: `"${opts.name}" <${opts.email}>`,
+  const result = await resend.emails.send({
+    from: `Vote4Garishan Website <${from}>`,
     to,
+    replyTo: opts.email,
     subject: `Message from ${opts.name} — campaign website`,
     text: [
       `Name:    ${opts.name}`,
@@ -61,4 +50,8 @@ export async function sendContactEmail(opts: {
       <p style="white-space:pre-wrap">${safeMessage}</p>
     `,
   });
+
+  if (result.error) {
+    throw new Error(result.error.message || 'Resend API request failed');
+  }
 }

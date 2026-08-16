@@ -101,7 +101,7 @@ export default function ContactPage() {
                 </button>
                 {submitState === 'success' && (
                   <div className="confirm-msg" id="c-confirm" style={{ display: 'block' }}>
-                    Message sent \u2014 thank you! Gari&apos;s team will be in touch soon.
+                    Message sent. thank you! Gari&apos;s team will be in touch soon.
                   </div>
                 )}
                 {submitState === 'error' && (

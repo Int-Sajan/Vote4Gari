@@ -25,7 +25,9 @@ function getAuth() {
 
 // ── Sheet details ────────────────────────────────────────────────────────────
 
-const SHEET_ID = process.env.GOOGLE_SHEET_ID ?? '';
+function getSheetId(): string {
+  return process.env.GOOGLE_SHEET_ID ?? '';
+}
 
 const VOLUNTEER_SHEET_NAME = 'Registrations';
 const INVOLVED_SHEET_NAME = 'Get Involved';
@@ -101,17 +103,19 @@ async function ensureSheetWithHeaders(
 }
 
 async function appendRowToSheet(sheetName: string, row: string[], headers: string[]): Promise<void> {
-  if (!SHEET_ID) {
+  const sheetId = getSheetId();
+
+  if (!sheetId) {
     throw new Error('Missing GOOGLE_SHEET_ID in .env');
   }
 
   const auth = getAuth();
   const sheets = google.sheets({ version: 'v4', auth });
 
-  await ensureSheetWithHeaders(SHEET_ID, sheetName, headers);
+  await ensureSheetWithHeaders(sheetId, sheetName, headers);
 
   await sheets.spreadsheets.values.append({
-    spreadsheetId: SHEET_ID,
+    spreadsheetId: sheetId,
     range: `${sheetName}!A:${columnName(headers.length - 1)}`,
     valueInputOption: 'USER_ENTERED',
     requestBody: { values: [row] },
@@ -119,7 +123,7 @@ async function appendRowToSheet(sheetName: string, row: string[], headers: strin
 }
 
 export async function appendRegistration(row: SheetRow): Promise<void> {
-  if (!SHEET_ID) {
+  if (!getSheetId()) {
     throw new Error('Missing GOOGLE_SHEET_ID in .env');
   }
 
@@ -155,7 +159,7 @@ export async function appendRegistration(row: SheetRow): Promise<void> {
 }
 
 export async function appendInvolvedRegistration(row: InvolvedSheetRow): Promise<void> {
-  if (!SHEET_ID) {
+  if (!getSheetId()) {
     throw new Error('Missing GOOGLE_SHEET_ID in .env');
   }
 

@@ -1,30 +1,42 @@
-import 'dotenv/config';
+import path from 'node:path';
+import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import volunteerRouter from './routes/volunteer';
 import involvedRouter from './routes/involved';
 import contactRouter from './routes/contact';
 
+// Always load backend/.env regardless of the process working directory.
+dotenv.config({ path: path.resolve(__dirname, '..', '.env') });
+
 const app  = express();
 const PORT = process.env.PORT ?? 3001;
 
 // ── CORS ──────────────────────────────────────────────────────────────────────
 // Allow only the frontend origin. In production, restrict this to your real domain.
-const allowedOrigins = (process.env.CORS_ORIGIN ?? 'http://localhost:5173,http://localhost:5174')
+const allowedOrigins = (process.env.CORS_ORIGIN ?? 'http://localhost:5173,http://localhost:5174,http://localhost:5176')
   .split(',')
-  .map(o => o.trim());
+  .map(o => o.trim())
+  .filter(Boolean);
 
-app.use(cors({
+const corsOptions: cors.CorsOptions = {
   origin: (origin, callback) => {
     // Allow server-to-server requests (no origin) and listed origins
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error(`CORS: origin '${origin}' not allowed`));
+      // Reject quietly without throwing a 500 error.
+      callback(null, false);
     }
   },
   methods: ['POST', 'OPTIONS'],
-}));
+  allowedHeaders: ['Content-Type'],
+};
+
+app.use(cors(corsOptions));
+
+// Explicit preflight handling for the contact endpoint.
+app.options('/api/contact', cors(corsOptions));
 
 // ── Body parsing ──────────────────────────────────────────────────────────────
 app.use(express.json({ limit: '16kb' }));
