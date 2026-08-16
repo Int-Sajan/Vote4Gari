@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      var l = window.location;
+      var base = l.pathname.split('/').slice(0, 2).join('/');
+      var path = l.pathname.replace(base, '');
+      var hash = path === '/' ? '' : path;
+      l.replace(base + '/index.html' + hash + l.search + l.hash);
+    </script>
+  </head>
+  <body></body>
+</html>

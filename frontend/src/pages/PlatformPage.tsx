@@ -1,0 +1,48 @@
+import { Link } from 'react-router-dom';
+
+export default function PlatformPage() {
+  return (
+    <>
+      <section className="dark" style={{ paddingTop: 56 }}>
+        <div className="wrap">
+          <p className="eyebrow">What I will work on</p>
+          <h2 className="section-title" style={{ color: '#fff' }}>Five priorities.</h2>
+          <p className="lede" style={{ marginTop: 14 }}>In his own words.</p>
+        </div>
+      </section>
+      <section>
+        <div className="wrap">
+          <div className="priority-list">
+            <div className="priority">
+              <div className="num">01</div>
+              <div><h3>Student mental health</h3><p>Measured counsellor caseloads and wait times the board has to publish.</p></div>
+            </div>
+            <div className="priority">
+              <div className="num">02</div>
+              <div><h3>Cyberbullying</h3><p>One reporting path across all 18 schools, with an answer inside five school days.</p></div>
+            </div>
+            <div className="priority">
+              <div className="num">03</div>
+              <div><h3>Curriculum and spending you can read</h3><p>Every board decision and every dollar posted in plain language.</p></div>
+            </div>
+            <div className="priority">
+              <div className="num">04</div>
+              <div><h3>Clear rules for AI</h3><p>Written limits on what AI may do with a child&apos;s work and a child&apos;s data.</p></div>
+            </div>
+            <div className="priority">
+              <div className="num">05</div>
+              <div><h3>Drug use and prevention</h3><p>Prevention taught early, and support that does not begin with suspension.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="callout">
+        <div className="wrap">
+          <h3>Have a question about the platform?</h3>
+          <Link className="btn btn-outline" to="/contact">Ask Gari directly</Link>
+        </div>
+      </div>
+    </>
+  );
+}
