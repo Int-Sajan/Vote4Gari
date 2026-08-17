@@ -70,10 +70,10 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="dark" style={{ paddingTop: 56 }}>
+      <section className="dark page-hero">
         <div className="wrap">
           <p className="eyebrow">Contact</p>
-          <h2 className="section-title" style={{ color: '#fff' }}>Get in touch.</h2>
+          <h2 className="section-title">Get in touch.</h2>
         </div>
       </section>
       <section>
@@ -81,7 +81,7 @@ export default function ContactPage() {
           <div className="split">
             <div>
               <p className="eyebrow">Reach the campaign</p>
-              <p style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', margin: '10px 0 22px' }}>647-989-GARI (4274)</p>
+              <p className="contact-lead">647-989-GARI (4274)</p>
               <p className="lede"><a href="mailto:vote4garishan@gmail.com" style={{ color: 'var(--signal)', textDecoration: 'underline' }}>vote4garishan@gmail.com</a></p>
               <p className="lede">@Vote4Garishan</p>
               <p className="lede">vote4garishan.ca</p>
@@ -90,7 +90,7 @@ export default function ContactPage() {
             </div>
             <div className="form-card">
               <p className="eyebrow" style={{ marginBottom: 6 }}>Send a message</p>
-              <h3 style={{ margin: '0 0 20px', fontSize: 20, color: 'var(--ink)' }}>Ask Gari a question</h3>
+              <h3 className="subsection-title">Ask Gari a question</h3>
               <form id="contactForm" onSubmit={onSubmit}>
                 <div className="field"><label htmlFor="c-name">Name</label><input id="c-name" name="name" type="text" autoComplete="name" minLength={2} required /></div>
                 <div className="field"><label htmlFor="c-email">Email</label><input id="c-email" name="email" type="email" autoComplete="email" required /></div>

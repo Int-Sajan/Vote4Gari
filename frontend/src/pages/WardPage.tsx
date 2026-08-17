@@ -1,11 +1,11 @@
 export default function WardPage() {
   return (
     <>
-      <section className="dark" style={{ paddingTop: 56 }}>
+      <section className="dark page-hero">
         <div className="wrap">
           <p className="eyebrow">Markham wards 5 and 7</p>
-          <h2 className="section-title" style={{ color: '#fff' }}>Where Gari is running.</h2>
-          <p className="lede" style={{ marginTop: 14 }}>Trustee electoral areas M5 + M7 · 2026–2030</p>
+          <h2 className="section-title">Where Gari is running.</h2>
+          <p className="lede">Trustee electoral areas M5 + M7 · 2026–2030</p>
         </div>
       </section>
       <section>

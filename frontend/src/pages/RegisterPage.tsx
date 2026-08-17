@@ -58,24 +58,24 @@ export default function RegisterPage() {
 
   return (
     <>
-      <section className="dark" style={{ paddingTop: 56, paddingBottom: 40 }}>
-        <div className="wrap">
+      <section className="dark page-hero page-hero-with-stats register-page register-page-top">
+        <div className="wrap register-shell">
           <p className="eyebrow">Register to vote</p>
-          <h2 className="section-title" style={{ color: '#fff' }}>Two minutes, and you're on the voters' list.</h2>
-          <p className="lede" style={{ marginTop: 14, maxWidth: 640 }}>
+          <h2 className="section-title">Two minutes, and you're on the voters' list.</h2>
+          <p className="lede register-intro">
             If you're not on the list, you can't vote for a trustee - even if you've lived in Markham your whole life.
             Tell us where to find you, and we'll point you straight to the official registration page.
           </p>
-          <div className="ward-stats" style={{ marginTop: 32, borderColor: 'var(--hair)' }}>
+          <div className="ward-stats ward-stats-two-col register-stats" style={{ borderColor: 'var(--hair)' }}>
             <div className="cell" style={{ borderColor: 'var(--hair)' }}><div className="num" style={{ color: '#fff' }}>18</div><div className="lab">Days to register online</div></div>
             <div className="cell" style={{ borderColor: 'var(--hair)' }}><div className="num red">Oct 26</div><div className="lab">Voting closes</div></div>
           </div>
         </div>
       </section>
 
-      <section className="dark" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="form-card on-dark">
+      <section className="dark register-page register-page-main" style={{ paddingTop: 0 }}>
+        <div className="wrap register-shell">
+          <div className="form-card on-dark form-card-register register-form-card">
             <form id="registerForm" onSubmit={onSubmit}>
               <div className="field"><label htmlFor="r-name">Full legal name</label><input id="r-name" name="name" type="text" placeholder="As it appears on your ID" autoComplete="name" minLength={2} required /></div>
               <div className="field"><label htmlFor="r-email">Email</label><input id="r-email" name="email" type="email" placeholder="you@example.com" autoComplete="email" /></div>
@@ -98,10 +98,10 @@ export default function RegisterPage() {
             </form>
           </div>
 
-          <div className="register-block" style={{ marginTop: 48 }}>
-            <div>
+          <div className="register-block register-block-balanced register-qr-block">
+            <div className="register-qr-copy">
               <p className="eyebrow">Scan to get on the voters' list</p>
-              <p className="lede" style={{ marginTop: 10 }}>vote4garishan.ca/register</p>
+              <p className="lede register-qr-url">vote4garishan.ca/register</p>
               <p className="register-lang">登記投票<br />வாக்காளர் பதிவு<br />ਵੋਟ ਲਈ ਰਜਿਸਟਰ ਕਰੋ</p>
             </div>
             <div className="qr-box"><img src="/Resources/image-5.png" alt="QR code linking to the voter registration page" /></div>

@@ -1,10 +1,92 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page Not Found | Vote4Garishan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --ink: #12151a;
+        --paper: #ffffff;
+        --signal: #dc3b1e;
+        --signal-dim: #b5311a;
+        --mist: #9aa0aa;
+        --line: rgba(255, 255, 255, 0.14);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: 'Inter', system-ui, sans-serif;
+        color: var(--paper);
+        background: var(--ink);
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: min(720px, 100%);
+        border: 1px solid var(--line);
+        padding: 38px 32px;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .eyebrow {
+        margin: 0;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--signal);
+      }
+      h1 {
+        margin: 10px 0 0;
+        font-family: 'Archivo Black', sans-serif;
+        text-transform: uppercase;
+        font-size: clamp(30px, 6vw, 54px);
+        line-height: 0.95;
+      }
+      p {
+        margin: 18px 0 0;
+        color: #ffffff;
+        line-height: 1.65;
+        max-width: 52ch;
+      }
+      .meta {
+        color: var(--mist);
+        font-size: 13px;
+        margin-top: 10px;
+      }
+      .btn {
+        margin-top: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: var(--signal);
+        color: #fff;
+        padding: 14px 20px;
+        border: 1px solid transparent;
+      }
+      .btn:hover { background: var(--signal-dim); }
+      @media (max-width: 640px) {
+        .card { padding: 28px 22px; }
+      }
+    </style>
   </head>
   <body>
-    <p>Not found.</p>
+    <main class="card">
+      <p class="eyebrow">404</p>
+      <h1>Page Not Found</h1>
+      <p>The page you are looking for does not exist or may have moved.</p>
+      <p class="meta">Elect Garishan Ravishankar · YRDSB Trustee · Markham Wards 5 and 7</p>
+      <a class="btn" href="/">Back to home</a>
+    </main>
   </body>
 </html>

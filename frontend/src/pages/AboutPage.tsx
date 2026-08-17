@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 export default function AboutPage() {
   return (
     <>
-      <section className="dark" style={{ paddingTop: 56 }}>
+      <section className="dark page-hero">
         <div className="wrap">
           <p className="eyebrow">About</p>
-          <h2 className="section-title" style={{ color: '#fff' }}>Gari Ravishankar</h2>
-          <p className="lede" style={{ marginTop: 14 }}>Candidate for YRDSB Public School Board Trustee - Ward 5 &amp; 7, Markham</p>
+          <h2 className="section-title">Gari Ravishankar</h2>
+          <p className="lede">Candidate for YRDSB Public School Board Trustee - Ward 5 &amp; 7, Markham</p>
         </div>
       </section>
       <section>

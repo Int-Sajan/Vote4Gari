@@ -1,11 +1,11 @@
 export default function DonatePage() {
   return (
     <>
-      <section className="dark" style={{ paddingTop: 56 }}>
+      <section className="dark page-hero">
         <div className="wrap">
           <p className="eyebrow">Donate</p>
-          <h2 className="section-title" style={{ color: '#fff' }}>Support the campaign.</h2>
-          <p className="lede" style={{ marginTop: 14 }}>Every dollar goes toward reaching voters in wards 5 and 7 before Oct 26.</p>
+          <h2 className="section-title">Support the campaign.</h2>
+          <p className="lede">Every dollar goes toward reaching voters in wards 5 and 7 before Oct 26.</p>
         </div>
       </section>
       <section>

@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 export default function PlatformPage() {
   return (
     <>
-      <section className="dark" style={{ paddingTop: 56 }}>
+      <section className="dark page-hero">
         <div className="wrap">
           <p className="eyebrow">What I will work on</p>
-          <h2 className="section-title" style={{ color: '#fff' }}>Five priorities.</h2>
-          <p className="lede" style={{ marginTop: 14 }}>In his own words.</p>
+          <h2 className="section-title">Five priorities.</h2>
+          <p className="lede">In his own words.</p>
         </div>
       </section>
       <section>

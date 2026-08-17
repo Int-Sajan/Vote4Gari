@@ -122,11 +122,11 @@ export default function GetInvolvedPage() {
 
   return (
     <>
-      <section className="dark" style={{ paddingTop: 56 }}>
+      <section className="dark page-hero">
         <div className="wrap">
           <p className="eyebrow">Get involved</p>
-          <h2 className="section-title" style={{ color: '#fff' }}>Keep me posted.</h2>
-          <p className="lede" style={{ marginTop: 14 }}>Volunteer, take a lawn sign, or hear about school-by-school town halls throughout the year.</p>
+          <h2 className="section-title">Keep me posted.</h2>
+          <p className="lede">Volunteer, take a lawn sign, or hear about school-by-school town halls throughout the year.</p>
         </div>
       </section>
       <section>
@@ -134,7 +134,7 @@ export default function GetInvolvedPage() {
           <div className="split">
             <div className="form-card">
               <p className="eyebrow" style={{ marginBottom: 6 }}>Sign up</p>
-              <h3 style={{ margin: '0 0 20px', fontSize: 20, color: 'var(--ink)' }}>Tell us how to reach you</h3>
+              <h3 className="subsection-title">Tell us how to reach you</h3>
               <form id="involvedForm" onSubmit={onSubmit}>
                 <div className="field-row">
                   <div className="field"><label htmlFor="i-name">Name</label><input id="i-name" name="name" type="text" autoComplete="name" minLength={2} required /></div>
@@ -173,11 +173,11 @@ export default function GetInvolvedPage() {
 
             <div>
               <p className="eyebrow">School town halls</p>
-              <h3 style={{ fontSize: 24, color: 'var(--ink)', margin: '8px 0 14px' }}>Online town halls, school by school.</h3>
+              <h3 className="feature-title">Online town halls, school by school.</h3>
               <p className="lede">Gari is planning a series of online town hall meetings through the year, organized by school community, so parents, students, and educators across wards 5 and 7 can ask questions directly. Dates are being scheduled. Sign up on the left to be notified as they&apos;re confirmed.</p>
               <hr className="rule-thin" style={{ margin: '28px 0' }} />
               <p className="eyebrow">Canvassing</p>
-              <h3 style={{ fontSize: 24, color: 'var(--ink)', margin: '8px 0 14px' }}>Two minutes. One question.</h3>
+              <h3 className="feature-title">Two minutes. One question.</h3>
               <p className="lede">Volunteers ask one thing at the door: are you on the Markham voters&apos; list? If not, it takes two minutes on a phone. If you&apos;d like to canvass, check &quot;I can volunteer&quot; and Gari&apos;s team will follow up with a script and a route.</p>
             </div>
           </div>

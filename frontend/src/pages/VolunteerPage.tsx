@@ -4,11 +4,11 @@ import VolunteerCalendar from '../components/VolunteerCalendar';
 export default function VolunteerPage() {
   return (
     <>
-      <section className="dark" style={{ paddingTop: 56 }}>
+      <section className="dark page-hero">
         <div className="wrap">
           <p className="eyebrow">Volunteer</p>
-          <h2 className="section-title" style={{ color: '#fff' }}>Help make this campaign happen.</h2>
-          <p className="lede" style={{ marginTop: 14 }}>Browse upcoming volunteer opportunities across wards 5 and 7. Select a date to see details and sign up.</p>
+          <h2 className="section-title">Help make this campaign happen.</h2>
+          <p className="lede">Browse upcoming volunteer opportunities across wards 5 and 7. Select a date to see details and sign up.</p>
         </div>
       </section>
 
