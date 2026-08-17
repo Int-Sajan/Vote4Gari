@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/donate" element={<DonatePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/volunteer" element={<VolunteerPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/register/*" element={<RegisterPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Layout>

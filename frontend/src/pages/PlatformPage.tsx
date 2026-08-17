@@ -23,15 +23,15 @@ export default function PlatformPage() {
             </div>
             <div className="priority">
               <div className="num">03</div>
-              <div><h3>Curriculum and spending you can read</h3><p>Every board decision and every dollar posted in plain language.</p></div>
-            </div>
-            <div className="priority">
-              <div className="num">04</div>
               <div><h3>Clear rules for AI</h3><p>Written limits on what AI may do with your child&apos;s work and your child&apos;s data.</p></div>
             </div>
             <div className="priority">
-              <div className="num">05</div>
+              <div className="num">04</div>
               <div><h3>Drug use, prevention, and harm reduction</h3><p>Prevention through the lens of awareness, education, and accessible support services.</p></div>
+            </div>
+            <div className="priority">
+              <div className="num">05</div>
+              <div><h3>Equitable Feedback Platforms</h3><p>Create future channels for students and guardians to correspond with feedback.</p></div>
             </div>
           </div>
         </div>

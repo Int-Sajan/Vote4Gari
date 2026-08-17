@@ -7,7 +7,7 @@ export default function AboutPage() {
         <div className="wrap">
           <p className="eyebrow">About</p>
           <h2 className="section-title" style={{ color: '#fff' }}>Gari Ravishankar</h2>
-          <p className="lede" style={{ marginTop: 14 }}>Candidate for YRDSB Public School Board Trustee — Ward 5 &amp; 7, Markham</p>
+          <p className="lede" style={{ marginTop: 14 }}>Candidate for YRDSB Public School Board Trustee - Ward 5 &amp; 7, Markham</p>
         </div>
       </section>
       <section>
@@ -26,7 +26,7 @@ export default function AboutPage() {
               <p className="lede">I would be incredibly grateful for your support, encouragement, and help spreading the word. If you know someone in Ward 5 &amp; 7, please feel free to share this page with them.</p>
               <hr className="rule" />
               <p style={{ fontWeight: 700, color: 'var(--ink)', margin: 0 }}>Gari Ravishankar</p>
-              <p className="mono" style={{ fontSize: 13, color: 'var(--mist)', margin: '4px 0 0' }}>Candidate for YRDSB Public School Board Trustee — Ward 5 &amp; 7 · Markham</p>
+              <p className="mono" style={{ fontSize: 13, color: 'var(--mist)', margin: '4px 0 0' }}>Candidate for YRDSB Public School Board Trustee - Ward 5 &amp; 7 · Markham</p>
               <div className="cta-row" style={{ marginTop: 26 }}>
                 <Link className="btn btn-solid" to="/platform">See the platform</Link>
                 <Link className="btn btn-outline on-light" to="/get-involved">Volunteer</Link>

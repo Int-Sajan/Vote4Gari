@@ -9,14 +9,18 @@ export default function HomePage() {
             <div>
               <p className="eyebrow">Elect</p>
               <h1>Garishan<br />Ravishankar</h1>
-              <p className="subtitle">
-                Candidate for public school trustee, York Region District School Board - Markham Wards 5 and 7
-              </p>
-              <p className="dates mono">OCT 16 – 26, 2026</p>
               <div className="cta-row">
                 <Link className="btn btn-solid" to="/register">Register to vote</Link>
                 <Link className="btn btn-outline" to="/platform">See the platform</Link>
               </div>
+              <p className="subtitle candidate-id">
+                Candidate for public school trustee
+                <br />
+                York Region District School Board - Markham
+                <br />
+                Wards 5 and 7.
+              </p>
+              <p className="dates mono">OCT 16 – 26, 2026</p>
             </div>
             <div className="hero-photo">
               <img src="/Resources/image-1.jpg" alt="Garishan Ravishankar, candidate for YRDSB public school trustee, wards 5 and 7" />
@@ -41,10 +45,7 @@ export default function HomePage() {
 
       <section>
         <div className="wrap">
-          <div className="split">
-            <div>
-              <img src="/Resources/image-2.jpg" alt="Garishan Ravishankar with community members" />
-            </div>
+          <div>
             <div>
               <p className="eyebrow">Meet Gari</p>
               <h2 className="section-title">A trustee who listens first.</h2>
@@ -52,7 +53,7 @@ export default function HomePage() {
                 My journey has been rooted in public service, community leadership, and education. I&apos;ve worked with the Ministry of the Attorney General and the Government of Canada, and spent years mentoring young people through educational and public-speaking programs.
               </p>
               <p className="lede">
-                I&apos;m running because our schools need trustees who listen to parents, students, and educators — and bring people together to find practical solutions.
+                I&apos;m running because our schools need trustees who listen to parents, students, and educators, and bring people together to find practical solutions.
               </p>
               <Link className="btn btn-outline on-light" style={{ marginTop: 8 }} to="/about">Read Gari&apos;s full story</Link>
             </div>

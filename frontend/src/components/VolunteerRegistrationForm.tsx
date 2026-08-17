@@ -253,7 +253,7 @@ export default function VolunteerRegistrationForm({ event, onClose, onCancel }: 
 
       {submitState === 'error' && (
         <p className="vreg-submit-err" role="alert">
-          Something went wrong — please try again.
+          Something went wrong - please try again.
         </p>
       )}
 

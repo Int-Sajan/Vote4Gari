@@ -63,7 +63,7 @@ export default function RegisterPage() {
           <p className="eyebrow">Register to vote</p>
           <h2 className="section-title" style={{ color: '#fff' }}>Two minutes, and you're on the voters' list.</h2>
           <p className="lede" style={{ marginTop: 14, maxWidth: 640 }}>
-            If you're not on the list, you can't vote for a trustee — even if you've lived in Markham your whole life.
+            If you're not on the list, you can't vote for a trustee - even if you've lived in Markham your whole life.
             Tell us where to find you, and we'll point you straight to the official registration page.
           </p>
           <div className="ward-stats" style={{ marginTop: 32, borderColor: 'var(--hair)' }}>
@@ -94,7 +94,7 @@ export default function RegisterPage() {
                 <button type="submit" className="btn btn-solid">Continue to registration</button>
               </div>
               <p className="fine">Registration itself happens on the official government site. This campaign never sees your ID.</p>
-              {showConfirm ? <div className="confirm-msg" id="r-confirm" style={{ display: 'block' }}>Thanks — this opens your email app with your details for the campaign, and electionsmarkham.ca opens in a new tab for the official registration.</div> : <div className="confirm-msg" id="r-confirm">Thanks — this opens your email app with your details for the campaign, and electionsmarkham.ca opens in a new tab for the official registration.</div>}
+              {showConfirm ? <div className="confirm-msg" id="r-confirm" style={{ display: 'block' }}>Thanks - this opens your email app with your details for the campaign, and electionsmarkham.ca opens in a new tab for the official registration.</div> : <div className="confirm-msg" id="r-confirm">Thanks - this opens your email app with your details for the campaign, and electionsmarkham.ca opens in a new tab for the official registration.</div>}
             </form>
           </div>
 

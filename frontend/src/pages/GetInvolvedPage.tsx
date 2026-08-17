@@ -87,7 +87,7 @@ export default function GetInvolvedPage() {
 
       if (response.ok) {
         setSubmitState('success');
-        setFeedback('Thanks — your details have been sent to Gari\'s team.');
+        setFeedback('Thanks - your details have been sent to Gari\'s team.');
         return;
       }
 
@@ -113,10 +113,10 @@ export default function GetInvolvedPage() {
       }
 
       setSubmitState('error');
-      setFeedback(payload.message ?? 'Sorry — we could not save your request. Please try again.');
+      setFeedback(payload.message ?? 'Sorry - we could not save your request. Please try again.');
     } catch {
       setSubmitState('error');
-      setFeedback('Sorry — we could not save your request. Please try again.');
+      setFeedback('Sorry - we could not save your request. Please try again.');
     }
   }
 
@@ -165,7 +165,7 @@ export default function GetInvolvedPage() {
                   </div>
                 ) : (
                   <div className="confirm-msg" id="i-confirm">
-                    Thanks — this opens your email app with your details filled in so Gari&apos;s team can add you to the list.
+                    Thanks - this opens your email app with your details filled in so Gari&apos;s team can add you to the list.
                   </div>
                 )}
               </form>

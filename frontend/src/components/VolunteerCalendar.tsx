@@ -169,7 +169,7 @@ export default function VolunteerCalendar() {
               role={hasEvent ? 'button' : undefined}
               tabIndex={hasEvent ? 0 : undefined}
               aria-label={
-                hasEvent ? `${date.getDate()} — ${events[0].name}` : undefined
+                hasEvent ? `${date.getDate()} - ${events[0].name}` : undefined
               }
               onClick={() => {
                 if (hasEvent) selectEvent(events[0]);
