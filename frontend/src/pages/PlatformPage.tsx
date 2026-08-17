@@ -15,7 +15,7 @@ export default function PlatformPage() {
           <div className="priority-list">
             <div className="priority">
               <div className="num">01</div>
-              <div><h3>Student mental health</h3><p>Measured counsellor caseloads and wait times the board has to publish.</p></div>
+              <div><h3>Accessible Student Mental Health Support</h3><p>Measured counsellor caseloads and wait times the board has to publish.</p></div>
             </div>
             <div className="priority">
               <div className="num">02</div>
@@ -27,11 +27,11 @@ export default function PlatformPage() {
             </div>
             <div className="priority">
               <div className="num">04</div>
-              <div><h3>Clear rules for AI</h3><p>Written limits on what AI may do with a child&apos;s work and a child&apos;s data.</p></div>
+              <div><h3>Clear rules for AI</h3><p>Written limits on what AI may do with your child&apos;s work and your child&apos;s data.</p></div>
             </div>
             <div className="priority">
               <div className="num">05</div>
-              <div><h3>Drug use and prevention</h3><p>Prevention taught early, and support that does not begin with suspension.</p></div>
+              <div><h3>Drug use, prevention, and harm reduction</h3><p>Prevention through the lens of awareness, education, and accessible support services.</p></div>
             </div>
           </div>
         </div>

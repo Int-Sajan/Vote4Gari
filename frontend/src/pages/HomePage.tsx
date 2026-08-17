@@ -10,7 +10,7 @@ export default function HomePage() {
               <p className="eyebrow">Elect</p>
               <h1>Garishan<br />Ravishankar</h1>
               <p className="subtitle">
-                Candidate for public school trustee, York Region District School Board — Markham wards 5 and 7.
+                Candidate for public school trustee, York Region District School Board - Markham Wards 5 and 7
               </p>
               <p className="dates mono">OCT 16 – 26, 2026</p>
               <div className="cta-row">
@@ -23,9 +23,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-tags">
-            <span>Students first</span>
-            <span>Born and raised</span>
-            <span>Proud Canadian</span>
+            <span>STUDENTS FIRST</span>
+            <span>PROUD CANADIAN</span>
+            <span>BORN AND RAISED</span>
           </div>
         </div>
       </section>
@@ -34,7 +34,7 @@ export default function HomePage() {
         <div className="wrap">
           <div className="stat"><div className="num">16</div><div className="label">Elementary schools</div></div>
           <div className="stat"><div className="num">2</div><div className="label">Secondary schools</div></div>
-          <div className="stat"><div className="num">2</div><div className="label">Wards — M5 + M7</div></div>
+          <div className="stat"><div className="num">2</div><div className="label">Wards M5 and M7</div></div>
           <div className="stat"><div className="num">11</div><div className="label">Days of voting</div></div>
         </div>
       </div>
@@ -65,11 +65,11 @@ export default function HomePage() {
           <p className="eyebrow">What I will work on</p>
           <h2 className="section-title">Five priorities.</h2>
           <div className="teaser-grid">
-            <div className="cell"><span className="num">01</span><span className="t">Student mental health</span></div>
+            <div className="cell"><span className="num">01</span><span className="t">Accessible Student Mental Health Support</span></div>
             <div className="cell"><span className="num">02</span><span className="t">Cyberbullying</span></div>
             <div className="cell"><span className="num">03</span><span className="t">Spending you can read</span></div>
             <div className="cell"><span className="num">04</span><span className="t">Clear rules for AI</span></div>
-            <div className="cell"><span className="num">05</span><span className="t">Drug use &amp; prevention</span></div>
+            <div className="cell"><span className="num">05</span><span className="t">Drug use, prevention, and harm reduction</span></div>
           </div>
           <Link className="btn btn-outline on-light" style={{ marginTop: 28 }} to="/platform">See the full platform</Link>
         </div>

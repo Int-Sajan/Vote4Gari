@@ -11,7 +11,7 @@ export default function DonatePage() {
       <section>
         <div className="wrap">
           <span className="badge">Set-up needed before this page goes live</span>
-          <p className="lede" style={{ marginTop: 16 }}>Two ways to give are outlined below. The e-Transfer option can go live as soon as you confirm it; the online option needs a compliant donation processor connected first — see the note under that card.</p>
+          <p className="lede" style={{ marginTop: 16 }}>Two ways to give are outlined below. The e-Transfer option can go live as soon as you confirm it; the online option needs a compliant donation processor connected first. See the note under that card.</p>
 
           <div className="donate-grid">
             <div className="donate-card">
@@ -26,7 +26,7 @@ export default function DonatePage() {
             </div>
           </div>
 
-          <p className="fine" style={{ maxWidth: 640 }}>This site can't process real payments on its own — donations for a municipal campaign have to be collected in a way that meets Ontario's Municipal Elections Act rules on contribution limits and receipts. Worth confirming the exact setup with Elections Markham or a campaign compliance advisor before this page goes live.</p>
+          <p className="fine" style={{ maxWidth: 640 }}>This site can't process real payments on its own. Donations for a municipal campaign have to be collected in a way that meets Ontario's Municipal Elections Act rules on contribution limits and receipts. Worth confirming the exact setup with Elections Markham or a campaign compliance advisor before this page goes live.</p>
         </div>
       </section>
     </>

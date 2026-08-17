@@ -158,7 +158,7 @@ export default function GetInvolvedPage() {
                 <button className="btn btn-solid" type="submit" disabled={submitState === 'submitting'}>
                   {submitState === 'submitting' ? 'Sending…' : 'Send'}
                 </button>
-                <p className="fine">Giving your email or number means the campaign may contact you about this election. Ask us to stop at any time and we will. Collected under the Municipal Elections Act, 1996.</p>
+                <p className="fine">Giving your email or number means the campaign may contact you about this election. Ask us to stop at any time or text STOP to end contact. Collected under the Municipal Elections Act, 1996.</p>
                 {submitState !== 'idle' ? (
                   <div className="confirm-msg" id="i-confirm" style={{ display: 'block' }}>
                     {feedback}
@@ -174,7 +174,7 @@ export default function GetInvolvedPage() {
             <div>
               <p className="eyebrow">School town halls</p>
               <h3 style={{ fontSize: 24, color: 'var(--ink)', margin: '8px 0 14px' }}>Online town halls, school by school.</h3>
-              <p className="lede">Gari is planning a series of online town hall meetings through the year, organized by school community, so parents, students, and educators across wards 5 and 7 can ask questions directly. Dates are being scheduled — sign up on the left to be notified as they&apos;re confirmed.</p>
+              <p className="lede">Gari is planning a series of online town hall meetings through the year, organized by school community, so parents, students, and educators across wards 5 and 7 can ask questions directly. Dates are being scheduled. Sign up on the left to be notified as they&apos;re confirmed.</p>
               <hr className="rule-thin" style={{ margin: '28px 0' }} />
               <p className="eyebrow">Canvassing</p>
               <h3 style={{ fontSize: 24, color: 'var(--ink)', margin: '8px 0 14px' }}>Two minutes. One question.</h3>
