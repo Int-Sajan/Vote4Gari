@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { clearCustomValidity, setCustomValidity, validateEmail, validatePhone, validatePostalCode } from '../lib/forms';
+import { API_URL } from '../config';
 
 type SubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -66,10 +67,8 @@ export default function GetInvolvedPage() {
     setSubmitState('submitting');
     setFeedback('');
 
-    const apiBase = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
-
     try {
-      const response = await fetch(`${apiBase}/api/involved`, {
+      const response = await fetch(`${API_URL}/api/involved`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

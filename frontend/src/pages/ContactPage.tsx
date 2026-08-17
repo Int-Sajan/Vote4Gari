@@ -1,5 +1,6 @@
 import { FormEvent, useRef, useState } from 'react';
 import { clearCustomValidity, setCustomValidity, validateEmail } from '../lib/forms';
+import { API_URL } from '../config';
 
 type SubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -48,10 +49,8 @@ export default function ContactPage() {
     didSubmit.current = true;
     setSubmitState('submitting');
 
-    const BACKEND = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
-
     try {
-      const res = await fetch(`${BACKEND}/api/contact`, {
+      const res = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, message: msg }),

@@ -1,5 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { VolunteerEvent } from '../data/volunteerEvents';
+import { API_URL } from '../config';
 
 // ── Validators ──────────────────────────────────────────────────────────────
 
@@ -90,9 +91,7 @@ export default function VolunteerRegistrationForm({ event, onClose, onCancel }: 
     setDidSubmit(true);
     setSubmitState('submitting');
 
-    const BACKEND = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
-
-    fetch(`${BACKEND}/api/volunteer`, {
+    fetch(`${API_URL}/api/volunteer`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
